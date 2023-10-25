@@ -28,5 +28,5 @@ while True:
         resultado = subtracao(value1, value2)
         if resultado is not None:
             print("Resultado da subtração:", resultado)
-        else:
-            print("Opção inválida. Escolha 1, 2 ou 0 para sair.")
+    else:
+        print("Opção inválida. Escolha 1, 2 ou 0 para sair.")
