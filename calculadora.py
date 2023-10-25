@@ -15,12 +15,12 @@ while True:
     
     escolha = input("Escolha uma opção (1/2/0): ")
 
-    value1 = float(input("Digite o valor primario: "))
-    value2 = float(input("Digite o valor secundario: "))
-
     if escolha == '0':
         print("Saindo da aplicação")
         break
+
+    value1 = float(input("Digite o valor primario: "))
+    value2 = float(input("Digite o valor secundario: "))
 
     if escolha == '1':
         print("Resultado: ", adicao(value1, value2))
