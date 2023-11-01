@@ -3,17 +3,21 @@ def adicao(value1, value2):
 
 def subtracao(value1, value2):
     if value1 < value2:
-        print("Digite um valor maior que o segundo numero")
+        print("O primeiro valor deve ser maior que o segundo")
     else: 
         return value1 - value2
+
+def multiplicacao(value1, value2):
+    return value1 * value2
 
 while True:
     print("Opções:")
     print("Digite '1' para adição")
     print("Digite '2' para subtração")
+    print("Digite '3' para multiplicação")
     print("Digite '0' para sair")
     
-    escolha = input("Escolha uma opção (1/2/0): ")
+    escolha = input("Escolha uma opção (1/2/3/0): ")
 
     if escolha == '0':
         print("Saindo da aplicação")
@@ -28,5 +32,5 @@ while True:
         resultado = subtracao(value1, value2)
         if resultado is not None:
             print("Resultado da subtração:", resultado)
-    else:
-        print("Opção inválida. Escolha 1, 2 ou 0 para sair.")
+    elif escolha == '3':
+        print("Resultado: ", multiplicacao(value1, value2))
