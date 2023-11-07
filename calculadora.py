@@ -1,36 +1,44 @@
-def adicao(value1, value2):
-    return value1 + value2
+def value():
+    while True:
+        entrada = input("Digite um número(ou '0' para sair): ")
+        if entrada == '0':
+            return None
+        entrada = entrada.replace(",", ".")
+        try:
+            numero = float(entrada)
+            return numero
+        except ValueError:
+            print("Entrada inválida. Por favor, insira um número válido.")
 
-def subtracao(value1, value2):
-    if value1 < value2:
-        print("O primeiro valor deve ser maior que o segundo")
-    else: 
-        return value1 - value2
-
-def multiplicacao(value1, value2):
-    return value1 * value2
 
 while True:
-    print("Opções:")
+    print("Opcões:")
     print("Digite '1' para adição")
     print("Digite '2' para subtração")
-    print("Digite '3' para multiplicação")
     print("Digite '0' para sair")
-    
-    escolha = input("Escolha uma opção (1/2/3/0): ")
+
+    escolha = input("Escolha uma opção (1/2/0): ")
 
     if escolha == '0':
         print("Saindo da aplicação")
         break
-
-    value1 = float(input("Digite o valor primario: "))
-    value2 = float(input("Digite o valor secundario: "))
-
-    if escolha == '1':
-        print("Resultado: ", adicao(value1, value2))
+    elif escolha == '1':
+        value1 = value()
+        value2 = value()
+        if value1 is not None and value2 is not None:
+            resultado = value1 + value2
+            print("Resultado: ", resultado)
     elif escolha == '2':
-        resultado = subtracao(value1, value2)
-        if resultado is not None:
-            print("Resultado da subtração:", resultado)
-    elif escolha == '3':
-        print("Resultado: ", multiplicacao(value1, value2))
+        value1 = value()
+        value2 = value()
+        if value1 is not None and value2 is not None:
+            if value1 >= value2:
+                resultado = value1 - value2
+                print("Resultado: ", resultado)
+            else:
+                print("O primeiro valor deve ser maior que o segundo")
+        else:
+            print("Valores inválidos para subtração.")
+    else:
+        print("Opção inváçida. Escolha 1, 2 ou 0 para sair.")
+        
