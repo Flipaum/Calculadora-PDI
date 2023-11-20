@@ -1,6 +1,6 @@
 def value():
     while True:
-        entrada = input("Digite um número(ou '0' para sair): ")
+        entrada = input("Digite um número(ou '0' para voltar ao menu inicial): ")
         if entrada == '0':
             return None
         entrada = entrada.replace(",", ".")
