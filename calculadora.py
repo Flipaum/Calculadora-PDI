@@ -1,3 +1,4 @@
+# Receber valores do usuario
 def value():
     while True:
         entrada = input("Digite um número(ou '0' para voltar ao menu inicial): ")
@@ -10,7 +11,7 @@ def value():
         except ValueError:
             print("Entrada inválida. Por favor, insira um número válido.")
 
-
+# Escolha o tipo de operacao
 while True:
     print("Opcões:")
     print("Digite '1' para adição")
@@ -33,12 +34,12 @@ while True:
         value2 = value()
         if value1 is not None and value2 is not None:
             if value1 >= value2:
-                resultado = value1 - value2
+                resultado = int(value1) - int(value2)
                 print("Resultado: ", resultado)
             else:
                 print("O primeiro valor deve ser maior que o segundo")
         else:
             print("Valores inválidos para subtração.")
     else:
-        print("Opção inváçida. Escolha 1, 2 ou 0 para sair.")
+        print("Opção inválida. Escolha 1, 2 ou 0 para sair.")
         
